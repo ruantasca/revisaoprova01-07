@@ -1,12 +1,17 @@
 import './App.css'
-import Buscacep from './components/Buscacep'
+import Home from './screens/Home'
+import PaginaCep from './screens/PaginaCep'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
-     <Buscacep />
-    </>
+    <Router>
+     <Routes>
+      <Route path="/" element={<Home /> }/>
+      <Route path="/busca-cep" element={<PaginaCep/>} />
+     </Routes>
+    </Router>
   )
 }
 
